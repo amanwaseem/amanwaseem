@@ -8,9 +8,12 @@
 
 **OMR Exam Grading System** | Capstone (COSC 499), team of 6 | Private repository | Completed
 
-A grading pipeline built for UBCO that processes scanned bubble sheets and produces released grades with minimal manual intervention. Instructors define exams with one or more variants and QR-coded metadata, generate and print bubble sheets, and scan completed sheets back into the system. The pipeline deskews and classifies scanned pages, reads student IDs and bubble marks, resolves exam variants, scores against the answer key, and flags low-confidence results for manual review. Reviewed results are released and synced to Canvas.
+A grading pipeline built for UBCO that processes scanned bubble sheets and produces released grades with minimal manual intervention. I owned the admin/telemetry and OMR pipeline layers: 174 commits, approximately 16% of the codebase by surviving lines (second-largest contribution across 6 team members).
 
-I owned the admin/telemetry and OMR pipeline layers of the system: 174 commits, accounting for approximately 16% of the codebase by surviving lines (second-largest contribution across 6 team members).
+<details>
+<summary>Full details</summary>
+
+Instructors define exams with one or more variants and QR-coded metadata, generate and print bubble sheets, and scan completed sheets back into the system. The pipeline deskews and classifies scanned pages, reads student IDs and bubble marks, resolves exam variants, scores against the answer key, and flags low-confidence results for manual review. Reviewed results are released and synced to Canvas.
 
 Key contributions:
 - Designed and implemented the metrics and telemetry system, including periodic system snapshots, per-service resource probing (PostgreSQL, Redis, SeaweedFS), and the admin dashboards used to visualize this data
@@ -24,18 +27,26 @@ Key contributions:
 
 **Technology stack:** FastAPI, SQLAlchemy (async), Alembic, Celery, arq, PostgreSQL, Redis, SeaweedFS, React, TypeScript, Vite, Docker Compose, OpenCV
 
+</details>
+
 ---
 
 **SnackOverflow** | Food delivery platform, university team project | [Repository](https://github.com/aliyanm564/SnackOverflow)
 
+Layered FastAPI backend with a Next.js frontend. I implemented the orders and notifications module end to end, including service layer, API routes, repository, and full test coverage.
+
+<details>
+<summary>Full details</summary>
+
 A layered FastAPI backend (domain, infrastructure, application, and presentation layers) supporting authentication, restaurant management, order processing, delivery tracking, payments, and reviews, with a Next.js frontend.
 
-I implemented the orders and notifications module end to end, including the service layer, API routes, repository, and full test coverage:
 - `OrderService`: order placement, cancellation, completion, filtering, and reordering, with notification dispatch on order events
 - Notification system: read/unread state management, mark-all-as-read, deletion, with ownership validation
 - Refactored error handling across 9 routers into a shared `handle_app_errors` decorator, removing repetitive exception-handling code (net reduction of 66 lines)
 
 **Technology stack:** FastAPI, Pydantic v2, SQLAlchemy, JWT authentication, pytest, Docker
+
+</details>
 
 ---
 
