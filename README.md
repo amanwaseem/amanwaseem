@@ -1,6 +1,6 @@
 # Aman Ullah Waseem
 
-4th-year Computer Science student focused on backend systems engineering. Most recently completed a two-month capstone project building an optical mark recognition (OMR) pipeline for automated exam grading.
+4th-year Computer Science student focused on backend systems engineering. Currently building an FPL points predictor with a public, append-only prediction log, a squad optimiser and a live API; previously completed a two-month capstone building an optical mark recognition (OMR) pipeline for automated exam grading.
 
 ---
 
